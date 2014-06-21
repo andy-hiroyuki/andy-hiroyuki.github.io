@@ -12,12 +12,12 @@ kramdown:
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : andy-h.github.io
+title : andy-hiroyuki.github.io
 tagline: Site Tagline
 author :
-  name : andy-h
+  name : andy-hiroyuki
   email : blah@email.test
-  github : andy-h
+  github : andy-hiroyuki
   twitter : username
   feedburner : feedname
 
@@ -33,7 +33,7 @@ category-list: [pages]
 # Else if you are pushing to username.github.io, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url : http://andy-h.github.io
+production_url : http://andy-hiroyuki.github.io
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
