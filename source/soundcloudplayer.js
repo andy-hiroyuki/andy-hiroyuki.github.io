@@ -88,7 +88,7 @@ $(function(){
 		// ## GUI Actions ---------------------------------------------------------------------------------------------
 
 		// Bind a click event to each list item we created above.
-		$(document).on('click', '#musiclist tr.track', function(){
+		$(document).on('click touchstart', '#musiclist tr.track', function(){
 
 			// Create a track variable, grab the data from it, and find out if it's already playing *(set to active)*
 			var $track = $(this),
@@ -177,7 +177,7 @@ function addMusic(sc_track) {
 //	track_html += "<td>" + "<a type='audio/mp3' class='sm2_button' href='" + sc_track.url + "'></a>" + "</td>";
 	track_html += "<td class='right'>" + sc_track.track_no + ".</td>";
 	track_html += "<td>" + sc_track.title + "</td>";
-	track_html += "<td>" + sc_track.album + "</td>";
+//	track_html += "<td>" + sc_track.album + "</td>";
 	track_html += "<td>" + convertDuration(sc_track.duration) + "</td>";
 	track_html += "</tr>";
 	$('#musiclist tbody').append(track_html);
