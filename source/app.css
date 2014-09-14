@@ -102,29 +102,27 @@ svg {
   width: 100%;
   height: 200px;
 }
-.content .pageside {
+.content .pagehead {
+  padding: 0 20px;
 }
-.content .pageside .jacket {
-  margin: 0 auto;
+.content .pagehead .pagehead-l {
+}
+.content .pagehead .jacket {
+  margin: 0 auto 0 0;
   background-color: #000;
   width: 200px;
-  height: 200px;
   box-shadow: 0 1px 2px 1px rgba(0,0,0,.3);
 }
-.content .pageside .jacket img {
+.content .pagehead .jacket img {
   width: 200px;
   height: 200px;
   box-shadow: 0 1px 3px #222;
   border-radius: 2px;
 }
-.content .pageside .jacketdesc {
-  margin: 0 auto;
-  width: 200px;
-  padding: 10px 0;
-}
-.content .pageside .jacketdesc .downloadbtn {
+.content .pagehead .downloadbtn {
   background-color: rgb(85,152,160);
   background: -webkit-linear-gradient(top, rgb(128,187,194) 0%, rgb(85,152,160) 50%);
+  width: 180px;
   margin: 10px;
   padding: 4px;
   color: #fff;
@@ -133,11 +131,18 @@ svg {
   border-radius: 4px;
   box-shadow: 0 1px 2px rgba(0,0,0,.3);
 }
-.content .pagecontent {
-  padding: 20px 60px;
+.content .pagehead .pagehead-r {
 }
-.content .pagecontent h1 {
+.content .pagehead .jacketdesc {
+  margin: 0 20px;
+  width: 460px;
+}
+.content .jacketdesc h1 {
   font-size: 32px;
+}
+.content .pagecontent {
+  clear: both;
+  padding: 20px 60px;
 }
 #musiclist {
   width: 100%;

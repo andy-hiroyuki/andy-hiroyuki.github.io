@@ -15,15 +15,20 @@ article
   #tile
     .content
       .page
-        .pageside
-          .jacket
-            img src="jacket.png"
-          .jacketdesc
-            .downloadbtn ダウンロード	
+        table.pagehead
+          tr
+            td.pagehead-l
+              .jacket
+                img src="jacket.png"
+            td.pagehead-r
+              .jacketdesc
+                h1 Wild Neverland
+                p
+                | リバーヒルソフトの「ワールドネバーランド」の世界観をイメージした楽曲です。ワーネバは私が大好きなゲームで当時は夜通しで夢中になってプレイしてました。
+          tr
+            td
+              .downloadbtn ダウンロード
         .pagecontent
-          h1 Wild Neverland
-          p
-          | リバーヒルソフトの「ワールドネバーランド」の世界観をイメージした楽曲です。ワーネバは私が大好きなゲームで当時は夜通しで夢中になってプレイしてました。
           #sc_player
             div
               | Now Playing:
@@ -35,10 +40,6 @@ article
                 th Title
                 th Time
             tbody
-
-svg version="1.1" xmlns="http://www.w3.org/2000/svg" 
-  filter#blur
-    feGaussianBlur stdDeviation="6" /
 
 script src="../SM2/soundmanager2-jsmin.js"
 javascript:
