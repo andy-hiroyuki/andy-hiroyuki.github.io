@@ -4,18 +4,10 @@
 }
 * {margin:0;padding:0;border: 0 none;position: relative;}
 
-html {
+body {
   background: url(background-photo.jpg) no-repeat 50% fixed;
   background-size: cover;
-  position: relative;
   width: 100%;
-  font-weight: 100;
-  overflow-y: scroll;
-}
-body {
-  width: 100%;
-  background: inherit;
-  overflow: hidden;
   color: #f5f5f5;
   font-family: Helvetica, YuGothic, Arial, sans-serif;
   font-weight: 300;
