@@ -1,0 +1,55 @@
+---
+layout: layout
+title: 聖剣伝説 ピアノコレクションズ
+---
+
+link href="../app.css" rel="stylesheet"
+css:
+  body {
+    /* http://www.fotopedia.com/items/flickr-658919714 */
+    background-image: url(background-photo.jpg);
+  }
+
+
+article
+  #tile
+    .content
+      .page
+        table.pagehead
+          tr
+            td.pagehead-l
+              .jacket
+                img src="jacket.png"
+            td.pagehead-r
+              .jacketdesc
+                h1 聖剣伝説 ピアノコレクションズ
+                p
+                | 私が尊敬している作曲家の一人、伊藤賢治氏の聖剣伝説の曲をピアノで弾きました。原曲に近いアレンジで弾いたものもあれば、即興的に弾いた曲もあります。
+          tr
+            td
+              .downloadbtn ダウンロード
+        .pagecontent
+          #sc_player
+            div
+              | Now Playing:
+              h2.title
+          table#musiclist
+            thead
+              tr
+                th.right #
+                th Title
+                th Time
+            tbody
+
+script src="../SM2/soundmanager2-jsmin.js"
+javascript:
+  soundManager.setup({
+    url: 'SM2/',
+    flashVersion: 9
+  });
+
+javascript:
+  var album_url = "http://pan-no-mimi.com/musics/legend-of-mana-piano/";
+  var tracks_url = "./tracks.json";
+
+script src="../sounddistributer.js"
