@@ -1,0 +1,26 @@
+[
+  {
+    "artist": "Andy Hiroyuki",
+    "title": "Blissful night",
+    "time": 98,
+    "filename": "01.mp3"
+  },
+  {
+    "artist": "Andy Hiroyuki",
+    "title": "Blissful night (title)",
+    "time": 98,
+    "filename": "02.mp3"
+  },
+  {
+    "artist": "Andy Hiroyuki",
+    "title": "Blissful night (Piano)",
+    "time": 96,
+    "filename": "03.mp3"
+  },
+  {
+    "artist": "Andy Hiroyuki",
+    "title": "Blissful night (another)",
+    "time": 207,
+    "filename": "04.mp3"
+  }
+]
