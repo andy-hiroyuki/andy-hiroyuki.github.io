@@ -11,38 +11,24 @@ css:
   }
 
 
-.sidebar
-  .sidesection
-    .sidesection-title アルバム
-    ul
-      li
-        == link_to 'Decision', '/decision/'
-      li
-        == link_to 'Another Fields', '/decision-another-fields/'
-      li
-        == link_to 'Midnight Celebration', '/midnight-celebration/'
-      li
-        == link_to 'Wild Neverland', '/wild-neverland/'
-  .sidesection
-    .sidesection-title プロフィール
-    ul
-      li SoundCloud
-      li GitHub
-  div style="clear:both;"
-
 article
   #tile
     .content
       .page
-        .pageside
-          .jacket
-            img src="jacket.png"
-          .jacketdesc
-            .downloadbtn ダウンロード	
+        table.pagehead
+          tr
+            td.pagehead-l
+              .jacket
+                img src="jacket.png"
+            td.pagehead-r
+              .jacketdesc
+                h1 Decision
+                p
+                | ファンタジーRPGをイメージした楽曲です。私の作曲キャリアで初のアルバムです。明るめな楽曲が多くバランス良く王道なジャンルの曲で構成されています。
+          tr
+            td
+              .downloadbtn ダウンロード
         .pagecontent
-          h1 Decision
-          p
-          | ファンタジーRPGをイメージした楽曲です。私の作曲キャリアで初のアルバムです。明るめな楽曲が多くバランス良く王道なジャンルの曲で構成されています。
           #sc_player
             div
               | Now Playing:
@@ -52,13 +38,8 @@ article
               tr
                 th.right #
                 th Title
-                / th Album
                 th Time
             tbody
-
-svg version="1.1" xmlns="http://www.w3.org/2000/svg" 
-  filter#blur
-    feGaussianBlur stdDeviation="6" /
 
 script src="../SM2/soundmanager2-jsmin.js"
 javascript:
