@@ -88,7 +88,6 @@ svg {
 .content {
   border-radius: 0 4px 4px 0;
   padding: 0px;
-  overflow: auto;
 }
 .content .page {
   padding: 40px 20px;
@@ -156,7 +155,7 @@ svg {
   color: #888;
 }
 #musiclist tr td {
-  border-bottom: 1px solid #666;
+  border-bottom: 1px solid #444;
 }
 #musiclist tr td:first-child {
   color: #aaa;
