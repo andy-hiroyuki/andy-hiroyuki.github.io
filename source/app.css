@@ -143,6 +143,27 @@ svg {
   clear: both;
   padding: 20px 60px;
 }
+#player {
+  text-align: center;
+  margin: 15px;
+}
+#player button {
+  margin: 20px 10px;
+  width: 45px;
+  height: 45px;
+  color: #ccc;
+  background: transparent;
+  border: 1px solid #888;
+  border-radius: 6px;
+  cursor: pointer;
+  outline : none;
+}
+#player button:hover {
+  background-color: rgba(255,255,255,.2);
+}
+#player button#ctrl-play.pause i:before {
+  content: "\f04c";
+}
 #musiclist {
   width: 100%;
   margin: 15px 0;
@@ -160,6 +181,14 @@ svg {
 #musiclist tr td:first-child {
   color: #aaa;
 }
+#musiclist .active td:first-child:before {
+  content: "\f04b";
+  font: normal normal normal 14px/1 FontAwesome;
+  position: absolute;
+  right: 40px;
+  top: 7px;
+  color: #fff;
+}
 #musiclist tr th,
 #musiclist tr td {
   padding: 2px 5px;
@@ -171,13 +200,4 @@ svg {
 }
 .right {
   text-align: right !important;
-}
-#sc_player {
-  text-align: center;
-  margin: 15px;
-}
-#sc_player button {
-  margin: 20px 10px;
-  padding: 2px 6px 3px;
-  border: 2px outset buttonface;
 }

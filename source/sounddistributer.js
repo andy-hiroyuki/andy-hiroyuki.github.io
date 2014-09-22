@@ -72,9 +72,13 @@ $(function(){
 
 
 	// ## GUI Actions ---------------------------------------------------------------------------------------------
+	var supportTouch = 'ontouchend' in document;
+	var EV_TOUCHSTART = supportTouch ? 'touchstart' : 'mousedown';
+	var EV_TOUCHMOVE  = supportTouch ? 'touchmove' : 'mousemove';
+	var EV_TOUCHEND   = supportTouch ? 'touchend' : 'mouseup';
 
 	// Bind a click event to each list item we created above.
-	$(document).on('click touchstart', '#musiclist tr.track', function(){
+	$(document).on(EV_TOUCHEND, '#musiclist tr.track', function(){
 
 		// Create a track variable, grab the data from it, and find out if it's already playing *(set to active)*
 		var $track = $(this),
@@ -85,11 +89,16 @@ $(function(){
 		if (playing) {
 			// If it is playing: pause it.
 			soundManager.pause(track_data.track_id);
+			$('#ctrl-play').removeClass('pause');
 
 		} else {
 			// If it's not playing: stop all other sounds that might be playing and play the clicked sound.
-			if ($track.siblings('tr').hasClass('active')) { soundManager.stopAll(); }
+			if ($track.siblings('tr').hasClass('active')) {
+				soundManager.stopAll();
+				$('#ctrl-play').removeClass('pause');
+			}
 			soundManager.play(track_data.track_id);
+			$('#ctrl-play').addClass('pause');
 		}
 
 		// Finally, toggle the *active* state of the clicked li and remove *active* from and other tracks.
@@ -98,27 +107,28 @@ $(function(){
 	});
 
 	// Bind a click event to the play / pause button.
-	$(document).on('click', '.play, .pause', function(){
+	$(document).on(EV_TOUCHEND, '#ctrl-play', function(){
 
 		if ( $('#musiclist tr.track').hasClass('active') == true ) {
 			// If a track is active, play or pause it depending on current state.
 			var track_idx = $('#musiclist .active').data('track_idx');
 			soundManager.togglePause( sc_tracks[track_idx].track_id );
+			$('#ctrl-play').toggleClass('pause');
 
 		} else {
 			// If no tracks are active, just play the first one.
-			$('#musiclist tbody tr:first-child').click();
+			$('#musiclist tbody tr:first-child').trigger(EV_TOUCHEND);
 		}
 
 	});
 
 	// Bind a click event to the next button, calling the Next Track function.
-	$(document).on('click', '.next', function(){
+	$(document).on(EV_TOUCHEND, '#ctrl-next', function(){
 		nextTrack();
 	});
 
 	// Bind a click event to the previous button, calling the Previous Track function.
-	$(document).on('click', '.prev', function(){
+	$(document).on(EV_TOUCHEND, '#ctrl-prev', function(){
 		prevTrack();
 	});
 
@@ -133,8 +143,8 @@ $(function(){
 
 		// Click the next list item after the current active one. 
 		// If it does not exist *(there is no next track)*, click the first list item.
-		if ( $('tr.track.active').next().click().length == 0 ) {
-			$('#musiclist tr.track:first-child').click();
+		if ( $('tr.track.active').next().trigger(EV_TOUCHEND).length == 0 ) {
+			$('#musiclist tr.track:first-child').trigger(EV_TOUCHEND);
 		}
 
 	}
@@ -147,8 +157,8 @@ $(function(){
 
 		// Click the previous list item after the current active one. 
 		// If it does not exist *(there is no previous track)*, click the last list item.
-		if ( $('tr.track.active').prev().click().length == 0 ) {
-			$('#musiclist tr.track:last-child').click();
+		if ( $('tr.track.active').prev().trigger(EV_TOUCHEND).length == 0 ) {
+			$('#musiclist tr.track:last-child').trigger(EV_TOUCHEND);
 		}
 
 	}
