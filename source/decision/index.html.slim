@@ -29,24 +29,7 @@ article
             td
               .downloadbtn ダウンロード
         .pagecontent
-          #sc_player
-            div
-              | Now Playing:
-              h2.title
-          table#musiclist
-            thead
-              tr
-                th.right #
-                th Title
-                th Time
-            tbody
-
-script src="../SM2/soundmanager2-jsmin.js"
-javascript:
-  soundManager.setup({
-    url: 'SM2/',
-    flashVersion: 9
-  });
+          == partial 'layouts/soundplayer'
 
 javascript:
   var album_url = "http://pan-no-mimi.com/musics/decision/";
