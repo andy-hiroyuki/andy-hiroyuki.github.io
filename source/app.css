@@ -15,11 +15,6 @@ body {
   line-height: 1.6;
 }
 a {
-  border: 1px solid #bbb;
-  border-radius: 5px;
-  padding: 4px;
-  line-height: 2.5;
-  text-decoration: none;
 }
 a:hover {
   text-decoration: underline;
@@ -58,7 +53,7 @@ svg {
   width: 0;
   position: absolute;
 }
-.sidebar {
+.albumsection {
   margin: 6vh auto 2vh;
   width: 800px;
   max-width: 800px;
@@ -66,24 +61,27 @@ svg {
   background-color: rgba(0,0,0,.7);
   border-radius: 4px;
 }
-.sidebar:before {
+.albumsection:before {
 }
-.sidebar:after {
+.albumsection:after {
   clear: both;
 }
-.sidebar .sidesection {
-  margin: 20px 0;
-  clear: both;
-}
-.sidebar .sidesection-title {
-  font-size: 85%;
-}
-.sidebar .sidesection ul:before {
+.albumsection ul:before {
   margin: 0 10px;
 }
-.sidebar .sidesection ul li {
+.albumsection ul li {
   float: left;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  background-size: cover;
   list-style: none;
+  border-radius: 2px;
+}
+.albumsection ul li a {
+  display: inline-block;
+  width: inherit;
+  height: inherit;
 }
 .content {
   border-radius: 0 4px 4px 0;

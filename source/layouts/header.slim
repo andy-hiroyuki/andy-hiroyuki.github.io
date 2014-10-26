@@ -1,18 +1,16 @@
 .l-header
-	.sidebar
-		.sidesection
-			.sidesection-title アルバム
-			ul
-				li
-					== link_to 'Decision', '/decision/'
-				li
-					== link_to 'Another Fields', '/decision-another-fields/'
-                li
-                    == link_to 'Blue Fantasy', '/blue-fantasy/'
-                li
-                    == link_to 'Green of Mana', '/green-of-mana/'
-				li
-					== link_to 'Midnight Celebration', '/midnight-celebration/'
-				li
-					== link_to 'Wild Neverland', '/wild-neverland/'
-		div style="clear:both;"
+  .albumsection
+    ul
+      li style="background-image: url(/decision/jacket.png)"
+        a href="/decision/"
+      li style="background-image: url(/decision-another-fields/jacket.png)"
+        a href="/decision-another-fields/"
+      li style="background-image: url(/blue-fantasy/jacket.png)"
+        a href="/blue-fantasy/"
+      li style="background-image: url(/green-of-mana/jacket.png)"
+        a href="/green-of-mana/"
+      li style="background-image: url(/midnight-celebration/jacket.png)"
+        a href="/midnight-celebration/"
+      li style="background-image: url(/wild-neverland/jacket.png)"
+        a href="/wild-neverland/"
+    div style="clear:both;"
