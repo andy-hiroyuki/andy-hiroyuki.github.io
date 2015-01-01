@@ -1,0 +1,38 @@
+---
+layout: layout
+title: Silver Forest
+---
+
+link href="../app.css" rel="stylesheet"
+css:
+  body {
+    /* https://www.flickr.com/photos/95950944@N08/15291942044 */
+    background-image: url(background-photo.jpg);
+  }
+
+
+article
+  #tile
+    .content
+      .page
+        table.pagehead
+          tr
+            td.pagehead-l
+              .jacket
+                img src="jacket.png"
+            td.pagehead-r
+              .jacketdesc
+                h1 Green of Mana
+                p
+                | ある一つの不思議な森の物語をイメージして即興で演奏しました。この森の中で暮らしている様々な生き物たちの様子を表現してみました。
+          tr
+            td
+              / .downloadbtn ダウンロード
+        .pagecontent
+          == partial 'layouts/soundplayer'
+
+javascript:
+  var album_url = "http://pan-no-mimi.com/musics/silver-forest/";
+  var tracks_url = "./tracks.json";
+
+script src="../sounddistributer.js"
