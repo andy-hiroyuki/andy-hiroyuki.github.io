@@ -1,0 +1,38 @@
+---
+layout: layout
+title: Sealed Story
+---
+
+link href="../app.css" rel="stylesheet"
+css:
+  body {
+    /* http://www.pexels.com/photo/sea-water-ocean-dark-656/ */
+    background-image: url(background-photo.jpg);
+  }
+
+
+article
+  #tile
+    .content
+      .page
+        table.pagehead
+          tr
+            td.pagehead-l
+              .jacket
+                img src="jacket.png"
+            td.pagehead-r
+              .jacketdesc
+                h1 Sealed Story
+                p
+                | 一匹の魚の物語。自分の知らない世界を目指して、今いる場所から旅立ちます。様々な体験を経て、果たして彼女が辿り着いた先には...
+          tr
+            td
+              / .downloadbtn ダウンロード
+        .pagecontent
+          == partial 'layouts/soundplayer'
+
+javascript:
+  var album_url = "http://oto-no-sono.com/musics/sealed-story/";
+  var tracks_url = "./tracks.json"; //avoid for Access-Control-Allow-Origin
+
+script src="../sounddistributer.js"
