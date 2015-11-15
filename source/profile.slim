@@ -1,0 +1,42 @@
+---
+layout: layout
+title: プロフィール
+---
+
+.container
+  .profile-head
+    img.img-circle src="https://placeholdit.imgix.net/~text?txtsize=8&txt=60%C3%9760&w=80&h=80"
+    h1 ANDY
+
+  section
+    h2.midashi 好きなこと
+
+    - data.profile.interests.each do |f|
+      .media
+        .media-left
+          img.media-object src=f.image_url width="60" height="60"
+        .media-body
+          h4.media-heading = f.midashi
+          h5.media-sub = f.sub
+
+  section
+    h2.midashi 好きなゲーム
+
+    - data.profile.games.each do |f|
+      .media
+        .media-left
+          img.media-object src=f.image_url width="60" height="60"
+        .media-body
+          h4.media-heading = f.midashi
+          h5.media-sub = f.sub
+
+  section
+    h2.midashi 好きな作曲家・バンド
+
+    - data.profile.artists.each do |f|
+      .media
+        .media-left
+          img.media-object src=f.image_url width="60" height="60"
+        .media-body
+          h4.media-heading = f.midashi
+          h5.media-sub = f.sub
